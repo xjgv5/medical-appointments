@@ -1,7 +1,25 @@
+package ui;
+
 import java.util.Scanner;
 
 public class UIMenu {
-    static void showMenu(){
+
+    public static String[] MONTHS = {
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    };
+
+    public static void showMenu(){
         int response = 0;
         System.out.println("Bienvenido al sistema de citas");
         System.out.println("Selecciona la opción deseada");
@@ -46,6 +64,9 @@ public class UIMenu {
             switch (response){
                 case 1:
                     System.out.println("Agenda una cita");
+                    for (int i = 1; i < 3; i++) {
+                        System.out.println(i + ".- " + MONTHS[i - 1]);
+                    }
                     break;
                 case 2:
                     System.out.println("Mis citas");
