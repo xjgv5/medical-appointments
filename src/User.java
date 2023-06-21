@@ -1,4 +1,4 @@
-public class User {
+public abstract class User {
     private String id;
     private String name;
     private String email;
@@ -54,4 +54,11 @@ public class User {
             this.phoneNumber = phoneNumber;
         }
     }
+
+    @Override
+    public String toString() {
+        return "model.User: " + name + ", Email: " + email +
+                "\nAddress: " + address + ", Phone: " + phoneNumber;
+    }
+    public abstract void showDataUser();
 }

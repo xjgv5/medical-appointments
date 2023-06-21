@@ -4,8 +4,16 @@ public class Patient extends User{
     private double height;
     private String blood;
 
-    Patient(String name, String email){
+    public Patient(String name, String email){
         super(name, email);
     }
 
- }
+    @Override
+    public void showDataUser() {
+        System.out.println("Paciente");
+        System.out.println("Historial del paciente");
+    }
+
+
+
+}

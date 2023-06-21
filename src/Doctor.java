@@ -5,15 +5,13 @@ public class Doctor extends User{
    private String speciality;
 
 
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name, email);
-        System.out.println("Nombre: " + name);
+        //System.out.println("Nombre: " + name);
         this.speciality = speciality;
     }
 
     //Métodos
-
-
     public String getSpeciality() {
         return speciality;
     }
@@ -29,6 +27,17 @@ public class Doctor extends User{
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     public void addAvailableAppointment(Date date, String time){
         availableAppointments.add(new Doctor.AvailableAppointment(date, time));
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n Especialidad: " + speciality;
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Hospital: ");
+        System.out.println("Departamento: ");
     }
 
     public ArrayList<AvailableAppointment> getAvailableAppointments() {
