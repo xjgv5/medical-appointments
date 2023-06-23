@@ -1,6 +1,9 @@
 package ui;
 
+
+import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class UIMenu {
 
@@ -78,5 +81,9 @@ public class UIMenu {
                     System.out.println("Opción no válida");
             }
         }while (response != 0);
+    }
+    private static void authUser(int userType){
+        ArrayList<Doctor> doctors = new ArrayList<>();
+        doctors.add(new Doctor());
     }
 }
